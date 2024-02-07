@@ -13,5 +13,7 @@ class Item(models.Model):
     History = models.IntegerField(null=False)
     Geography = models.IntegerField(null=False)
     Business = models.IntegerField(null=False)
+    def __str__(self):
+        return self.name
 
 
