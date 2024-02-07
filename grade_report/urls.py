@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from reports.views import say_hello
+from reports.views import get_reports
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', say_hello, name="hello")
+    path('', get_reports, name='get_reports')
 ]
