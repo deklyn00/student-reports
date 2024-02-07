@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Item(models.Model):
     userid = models.CharField(null=False, blank=False, max_length=8)
     name = models.CharField(null=False, blank=False, max_length=20)
@@ -13,7 +15,6 @@ class Item(models.Model):
     History = models.IntegerField(null=False)
     Geography = models.IntegerField(null=False)
     Business = models.IntegerField(null=False)
+
     def __str__(self):
         return self.name
-
-
