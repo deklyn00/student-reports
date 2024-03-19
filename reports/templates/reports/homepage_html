@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReportCards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>STUDENT REPORTS</h1>
+    </header>
+    <section class="login-section">
+        <form class="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <main class="main-content">
+        <section class="content">
+            <h2>SEE YOUR GRADES</h2>
+            <p>To see your grades please login. Good luck!</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 School Grades</p>
+    </footer>
+</body>
+</html>
