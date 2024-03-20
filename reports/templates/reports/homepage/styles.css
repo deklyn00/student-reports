@@ -4,76 +4,86 @@
     padding: 0;
 }
 
-body {
+body, html {
+    height: 100%; /* Ensure content is centered to stack equally*/
     font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    min-height: 100vh; 
 }
 
 .header, .login-section, .main-content, .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center vertically*/
     text-align: center;
     padding: 20px;
-}
-
-.login-section {
-    width: 100%;
-    max-width: 400px; /* Initial size might change */
+    width: 100%; 
+    max-width: 800px; 
 }
 
 .login-form {
+    width: 100%;
+}
+
+.login-section {
+    width: 100%; /* Specific to login section for better appearance */
+}
+
+.login-form, .input-group, .content {
     display: flex;
     flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
     gap: 10px;
     width: 100%;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.input-group label {
-    margin-bottom: 5px;
-}
-
-.input-group input {
+.input-group input, button {
     padding: 8px;
+    width: calc(100% - 16px); 
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 5px 0; 
 }
 
 button {
-    padding: 10px;
     background-color: #6846b8;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
     background-color: #00b39b;
 }
 
+/* Adjusting media queries to maintain centering */
 @media (min-width: 768px) {
-    .main-content {
+    .main-content, .header, .login-section, .footer {
         flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
+        justify-content: center; 
+        align-items: center; 
+        gap: 20px; 
     }
-
     .content {
-        width: 45%;
+        width: 45%; /* Adjust width while keeping the content centered */
     }
 }
 
 @media (min-width: 1024px) {
     .header, .login-section, .main-content, .footer {
         flex-direction: row;
-        justify-content: space-around;
-        text-align: left;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
 }
