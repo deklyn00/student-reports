@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 
 def get_reports(request):
-    return render(request, 'reports/report_cards.html')
+    return render(request, 'templates/reports/report_cards.html')
