@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'grade_report.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
